@@ -36,76 +36,64 @@
 
 
 
-   <section class="git-guide">
-  <h2>🧙‍♂️ Święty Graal Gita – Pełny Przebieg Pracy</h2>
+  <h1>Święty Grall</h1>
 
-  <h3>🔗 Połączenie ze zdalnym repozytorium</h3>
-  <pre><code>git remote add origin url</code></pre>
+<p>Połącz się ze zdalnym repozytorium za pomocą polecenia:</p>
+<pre>git remote add origin url</pre>
 
-  <h3>🌱 Tworzenie nowej gałęzi roboczej</h3>
-  <pre><code>git checkout -b galaz</code></pre>
+<p>Utwórz nową gałąź roboczą i przełącz się na nią:</p>
+<pre>git checkout -b galaz</pre>
 
-  <h3>🛠️ Wprowadź zmiany i je zatwierdź</h3>
-  <pre><code>git add .
-git commit -m "Opis zmian"</code></pre>
+<p>Wprowadź zmiany w projekcie.</p>
 
-  <h3>⬅️ Powrót na główną gałąź i scalenie</h3>
-  <pre><code>git checkout main
-git merge galaz</code></pre>
+<p>Dodaj zmienione pliki do indeksu:</p>
+<pre>git add .</pre>
 
-  <h3>💾 Dodaj i zatwierdź dodatkowe zmiany (jeśli są)</h3>
-  <pre><code>git add .
-git commit -m "Opis zmian"</code></pre>
+<p>Zatwierdź zmiany z odpowiednim opisem:</p>
+<pre>git commit -m "opis zmian"</pre>
 
-  <h3>⬇️ Pobierz najnowsze zmiany zdalne</h3>
-  <pre><code>git pull origin main</code></pre>
+<p>Przełącz się na gałąź główną (main):</p>
+<pre>git checkout main</pre>
 
-  <h3>⬆️ Wypchnij zmiany do zdalnego repozytorium</h3>
-  <pre><code>git push origin main</code></pre>
+<p>Scal swoją gałąź roboczą z gałęzią główną:</p>
+<pre>git merge galaz</pre>
 
-  <h3>🚨 Jeśli merge nie działa – RĘCZNE ROZWIĄZANIE</h3>
-  <pre><code># Wejdź na itachi
+<p>Dodaj i zatwierdź ewentualne dodatkowe zmiany:</p>
+<pre>
+git add .
+git commit -m "opis zmian"
+</pre>
+
+<p>Pobierz najnowsze zmiany z repozytorium zdalnego:</p>
+<pre>git pull origin main</pre>
+
+<p>Wypchnij lokalne zmiany do repozytorium zdalnego:</p>
+<pre>git push origin main</pre>
+
+<hr>
+
+<h2>Jeżeli nie możesz zmergować</h2>
+
+<p><strong>Rozwiązanie siłowe</strong> (jeśli nie masz tych zmian w <code>main</code>, a chcesz je tam wrzucić):</p>
+
+<pre>
+# Wejdź na itachi
 git checkout itachi
 
 # Skopiuj plik
 cp index.html /tmp/index.html
 
-# Przejdź na main
+# Wejdź na main
 git checkout main
 
-# Nadpisz plik
+# Nadpisz plik z backupu
 cp /tmp/index.html index.html
 
 # Zapisz zmianę
 git add index.html
-git commit -m "Wrzucenie kodu HTML z itachi na main"</code></pre>
+git commit -m "Wrzucenie kodu HTML z itachi na main"
+</pre>
 
-  <h3>📜 Jak sprawdzić historię commitów</h3>
-  <pre><code>git log --oneline</code></pre>
-
-  <hr>
-
-  <h3>📖 Skrócona wersja – Święty Graal Gita</h3>
-  <pre><code>git remote add origin url
-git checkout -b galaz
-git add .
-git commit -m "Opis zmian"
-git checkout main
-git merge galaz
-git add .
-git commit -m "Opis zmian"
-git pull origin main
-git push origin main</code></pre>
-
-  <h3>🔁 Podstawowe komendy Git</h3>
-  <pre><code>git checkout nazwa-gałęzi         # Przełącz gałąź
-git push origin nazwa-gałęzi      # Wypchnij zmiany
-git branch -a                     # Lista lokalnych i zdalnych gałęzi
-git checkout -b nowa-galaz        # Nowa gałąź
-git branch -D nazwa-gałęzi        # Usuń lokalną gałąź
-git fetch --prune                 # Odśwież gałęzie zdalne
-git push origin --delete Main     # Usuń gałąź zdalną</code></pre>
-</section>
 
     </div>
 
